@@ -8,7 +8,7 @@
     <!-- versionCode is optional and Android only -->
 
     <name>Allokate Game</name>
-
+    
     <description>
         A puzzle game where you allocate pieces.
     </description>
@@ -18,4 +18,5 @@
     </author>
 
     <gap:platform name="android" />
+    <preference name="permissions" value="none"/>
 </widget>
