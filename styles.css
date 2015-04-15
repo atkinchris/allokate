@@ -13,26 +13,21 @@ body {
 .column {      
   opacity: 1;
   font: 2em bold;
-  padding: 30px;
+  padding: 10px;
 }
 
 .piece {
-  width: 100px;
-  height: 100px;
+  height: 13vmin;
+  width: 13vmin;
   line-height: 100px;
   background-color: #00B4FF;
   border-radius: 50%;
-  margin: 10px;
+  margin: 2vmin;
   text-align: center;
   color: white;
   opacity: 0.05;
   font-size: 1.5em;
   transition: all 0.25s ease-in-out;
-}
-
-.piece:hover:not(.winner) {
-  opacity: 0.5;
-  transform: scale(1.1, 1.1);
 }
 
 .winner {
@@ -50,7 +45,7 @@ body {
 }
 
 #game-board {
-  margin: 50px auto;
+  margin: 6vmin auto;
 }
 
 .invisible {
