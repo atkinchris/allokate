@@ -5,9 +5,7 @@
         versionCode = "10" 
         version     = "0.0.1" >
 
-    <!-- versionCode is optional and Android only -->
-
-    <name>Allokate Game</name>
+    <name>Allokate</name>
     
     <description>
         A puzzle game where you allocate pieces.
