@@ -4,27 +4,41 @@ table, tr, th, td {
 
 body {
   overflow: hidden;
+  font-family: helvetica, sans-serif;
+  background-color: #FFFFFF;
+  color: #515151;
 }
 
 .row,
 .column {      
   opacity: 1;
-  color: grey;
-  font: 1.5em bold;
+  font: 2em bold;
+  padding: 30px;
 }
 
 .piece {
   width: 100px;
   height: 100px;
   line-height: 100px;
-  background-color: red;
+  background-color: #00B4FF;
   border-radius: 50%;
   margin: 10px;
   text-align: center;
   color: white;
   opacity: 0.05;
   font-size: 1.5em;
-  transition: opacity .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.piece:hover:not(.winner) {
+  opacity: 0.5;
+  transform: scale(1.1, 1.1);
+}
+
+.winner {
+  opacity: 1;
+  transition: transform 1s ease-in-out;
+  transform: scale(40,40);
 }
 
 .selected {
@@ -32,9 +46,32 @@ body {
 }
 
 .zero {
-  opacity: 0.5;
+  color: #EEEEEE;
 }
 
 #game-board {
   margin: 50px auto;
+}
+
+.invisible {
+  display: none;
+}
+
+#congratulations {
+  position: absolute;
+  color: white;
+  font: 4em sans-serif;
+  text-align: center;
+  top: 30%;
+  width: 100%;
+  z-index: 99;
+}
+
+.button {
+  color: #515151;
+  margin-top: 25px;
+  font-weight: bold;
+  background-color: #fff;
+  padding: 20px 70px;
+  font-size: 24px;
 }

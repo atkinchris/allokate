@@ -28,7 +28,8 @@ function setupPieces() {
 				}
 				updateCounts(puzzle);
 				if (puzzle.complete()) {
-					alert("You won!");
+					this.classList.toggle('winner');
+					document.getElementById('congratulations').classList.toggle('invisible');
 				}
 			}
 		})(i);
