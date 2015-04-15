@@ -1,43 +1,21 @@
-function generatePuzzle() {
-	var myStringArray = new Array(width * width);
-	var arrayLength = myStringArray.length;
-	var total = 0;
-
-	while (total < width) {
-		for (var i = 0; i < arrayLength; i++) {
-			myStringArray[i] = Math.round(Math.random());
-		}
-		total = myStringArray.reduce(function(a, b) {
-			return a + b;
-		});
-	}
-
-	return myStringArray;
-}
-
 function updateCounts(puzzle) {
-	columns = columns.map(Number.prototype.valueOf, 0);
-	rows = rows.map(Number.prototype.valueOf, 0);
-	for (var i = 0; i < puzzle.length; i++) {
-		var value = puzzle[i];
-		rows[Math.floor(i / width)] += value;
-		columns[i % width] += value;
+	for (var i = 0; i < puzzle.width; i++) {
+		var colTotal = puzzle.sumColumn(i + 1);
+		columnElements[i].innerHTML = colTotal;
+		if (colTotal == 0) {
+			columnElements[i].classList.add('zero')
+		} else {			
+			columnElements[i].classList.remove('zero')
+		}
+
+		var rowTotal = puzzle.sumRow(i + 1);
+		rowElements[i].innerHTML = rowTotal;
+		if (rowTotal == 0) {
+			rowElements[i].classList.add('zero')
+		} else {			
+			rowElements[i].classList.remove('zero')
+		}
 	}
-
-	for (var i = 0; i < width; i++) {
-		columnElements[i].innerHTML = columns[i];
-		rowElements[i].innerHTML = rows[i];
-	}
-}
-
-function zeroArray(length) {
-	return Array.apply(null, new Array(length)).map(Number.prototype.valueOf, 0);
-}
-
-function togglePiece(position) {
-	var value = pieceArray[position];
-	pieceArray[position] = value == 0 ? 1 : 0;
-	updateCounts(pieceArray);
 }
 
 function setupPieces() {
@@ -45,20 +23,20 @@ function setupPieces() {
 	for (var i = 0, len = g.length; i < len; i++) {
 		(function(index) {
 			g[i].onclick = function() {
-				togglePiece(index);
-				this.classList.toggle('selected');
+				if (puzzle.togglePiece(index)) {
+					this.classList.toggle('selected');
+				}
+				updateCounts(puzzle);
+				if (puzzle.complete()) {
+					alert("You won!");
+				}
 			}
 		})(i);
 	}
 }
 
-var width = 5;
-
-var puzzleArray = generatePuzzle();
-var pieceArray = zeroArray(width * width);
+var puzzle = new Puzzle(5);
 var columnElements = document.getElementsByClassName("column");
 var rowElements = document.getElementsByClassName("row");
-var rows = zeroArray(width);
-var columns = zeroArray(width);
 setupPieces();
-updateCounts(puzzleArray);
+updateCounts(puzzle);

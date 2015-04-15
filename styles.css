@@ -8,6 +8,7 @@ body {
 
 .row,
 .column {      
+  opacity: 1;
   color: grey;
   font: 1.5em bold;
 }
@@ -21,7 +22,7 @@ body {
   margin: 10px;
   text-align: center;
   color: white;
-  opacity: 0.1;
+  opacity: 0.05;
   font-size: 1.5em;
   transition: opacity .25s ease-in-out;
 }
@@ -30,17 +31,10 @@ body {
   opacity: 1;
 }
 
-.circle {
-  width: 2000px;
-  height: 2000px;
-  margin: -500px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  transform: scale(0.1); /* 1/10 of the original size */
-  transition: all 1s ease-in-out;
+.zero {
+  opacity: 0.5;
 }
 
-.circle:hover {
- transform: scale(1);
+#game-board {
+  margin: 50px auto;
 }
