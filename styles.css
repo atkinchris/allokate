@@ -11,28 +11,29 @@ body {
 
 .row,
 .column {      
-  opacity: 1;
-  font: 2em bold;
-  padding: 10px;
+  opacity: 0.25;
+  font: 1.5em bold;
+  color: #515151;
+  z-index: -1;
 }
 
 .piece {
-  height: 13vmin;
-  width: 13vmin;
-  line-height: 100px;
+  height: 9vmin;
+  width: 9vmin;
   background-color: #00B4FF;
   border-radius: 50%;
-  margin: 2vmin;
-  text-align: center;
-  color: white;
+  margin: 1vmin;
   opacity: 0.05;
-  font-size: 1.5em;
+  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 
 .winner {
   opacity: 1;
+  z-index: 10;
+  -webkit-transition: transform 1s ease-in-out;
   transition: transform 1s ease-in-out;
+  -webkit-transform: scale(40,40);
   transform: scale(40,40);
 }
 
