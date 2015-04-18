@@ -43,6 +43,7 @@ body {
   border-radius: 25%;
   margin: 0.5vh;
   opacity: 0.05;
+  -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
@@ -51,6 +52,7 @@ body {
   opacity: 1;
   z-index: 10;
   border-radius: 50%;
+  -webkit-backface-visibility: hidden;
   -webkit-transition: transform 1s ease-in-out;
   transition: transform 1s ease-in-out;
   -webkit-transform: scale(40,40);
@@ -121,6 +123,7 @@ body {
   z-index: 99;
   background-color: white;
   border-radius: 50%;
+  -webkit-backface-visibility: hidden;
   -webkit-transition: visibility 0s ease-in-out .5s, opacity .5s ease-in-out;
   transition: visibility 0s ease-in-out .5s, opacity .5s ease-in-out;
 }
