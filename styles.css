@@ -12,7 +12,7 @@ body {
   font-family: 'Open Sans', sans-serif !important;
   background-color: #FFFFFF;
   color: #515151;
-  font: 2.5vmax bold;
+  font: 2.5vh bold;
 }
 
 .row,
@@ -21,27 +21,27 @@ body {
   z-index: -1;
   background-color: #ACACAC;
   border-radius: 50%;
-  width: 4.5vmax;
-  height: 4.5vmax;
+  width: 4.5vh;
+  height: 4.5vh;
   text-align: center;
   margin: auto;
   line-height: 1.75em;
 }
 
 .row {
-  margin-right: 2vmax;
+  margin-right: 2vh;
 }
 
 .column {
-  margin-bottom: 2vmax;
+  margin-bottom: 2vh;
 }
 
 .piece {
-  height: 8.5vmax;
-  width: 8.5vmax;
+  height: 8.5vh;
+  width: 8.5vh;
   background-color: #00B4FF;
   border-radius: 25%;
-  margin: 0.5vmax;
+  margin: 0.5vh;
   opacity: 0.05;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
@@ -67,14 +67,14 @@ body {
 
 #game-board {
   clear: both;
-  margin: 6vmax auto;
+  margin: 6vh auto;
 }
 
 #header {
-  width: 40vmax;
-  height: 4vmax;
-  margin: 2vmax auto;
-  margin-bottom: 10vmax;
+  width: 40vh;
+  height: 4vh;
+  margin: 2vh auto;
+  margin-bottom: 10vh;
 }
 
 #header div {  
@@ -93,12 +93,12 @@ body {
 #par div:last-child {
   background-color: #ececec;
   border-radius: 50%;
-  width: 4vmax;
-  height: 4vmax;
+  width: 4vh;
+  height: 4vh;
   padding: 0.25em;
   line-height: 1.5em;
   text-align: center;
-  margin-left: 1vmax;
+  margin-left: 1vh;
 }
 
 #par div:last-child {  
@@ -110,14 +110,14 @@ body {
   visibility: visible;
   opacity: 1;
   position: absolute;
-  font-size: 8vmax;
+  font-size: 8vh;
   text-align: center;
   top: 50%;
   left: 50%;
-  margin-left: -30vmax;
-  margin-top: -30vmax;
-  width: 60vmax;
-  height: 60vmax;
+  margin-left: -30vh;
+  margin-top: -30vh;
+  width: 60vh;
+  height: 60vh;
   z-index: 99;
   background-color: white;
   border-radius: 50%;
@@ -131,7 +131,7 @@ body {
 }
 
 #congratulations p {
-  padding-top: 16vmax;
+  padding-top: 16vh;
 }
 
 .button {
