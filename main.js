@@ -5,7 +5,7 @@ function updateCounts(puzzle) {
 		columnElements[i].innerHTML = colTotal;
 		if (colTotal == 0) {
 			columnElements[i].classList.add('zero')
-		} else {			
+		} else {
 			columnElements[i].classList.remove('zero')
 		}
 
@@ -13,13 +13,13 @@ function updateCounts(puzzle) {
 		rowElements[i].innerHTML = rowTotal;
 		if (rowTotal == 0) {
 			rowElements[i].classList.add('zero')
-		} else {			
+		} else {
 			rowElements[i].classList.remove('zero')
 		}
 	}
 }
 
-function setupPieces() {
+function setupPieces(puzzle) {
 	var g = document.getElementsByClassName("piece");
 	for (var i = 0, len = g.length; i < len; i++) {
 		(function(index) {
@@ -40,6 +40,7 @@ function setupPieces() {
 var puzzle = new Puzzle(5);
 var columnElements = document.getElementsByClassName("column");
 var rowElements = document.getElementsByClassName("row");
-var movesElement = document.getElementById("moves");
-setupPieces();
+var movesElement = document.getElementById("moves").lastElementChild;
+document.getElementById("par").lastElementChild.innerHTML = puzzle.par;
+setupPieces(puzzle);
 updateCounts(puzzle);

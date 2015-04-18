@@ -61,21 +61,30 @@ body {
 }
 
 #game-board {
+  clear: both;
   margin: 6vmin auto;
 }
 
-#score {
-  width: 60vmin;
+#header {
+  width: 75vmin;
+  height: 4vmin;
   margin: 2vmin auto;
 }
 
-#score div {
+#header div {  
   display: inline-block;
-  position: relative;
-  left: 72%;
 }
 
 #moves {
+  float: right;
+}
+
+#par {
+  float: left;
+}
+
+#moves div:last-child,
+#par div:last-child {
   background-color: #ececec;
   border-radius: 50%;
   width: 4vmin;
@@ -84,6 +93,11 @@ body {
   line-height: 4vmin;
   text-align: center;
   margin-left: 1vmin;
+}
+
+#par div:last-child {  
+  color: white;
+  background-color: #00B4FF;
 }
 
 #congratulations {

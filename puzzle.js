@@ -17,11 +17,8 @@ Puzzle.prototype.generate = function() {
 		total = this.solution.reduce(function(a, b) {
 			return a + b;
 		});
+		this.par = total;
 	}
-
-	console.log(this.solution.reduce(function(a, b) {
-		return a + b;
-	}));
 }
 
 Puzzle.prototype.sumColumn = function(position) {
