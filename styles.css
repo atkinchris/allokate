@@ -12,7 +12,7 @@ body {
   font-family: 'Open Sans', sans-serif !important;
   background-color: #FFFFFF;
   color: #515151;
-  font: 3vmin bold;
+  font: 2.5vmax bold;
 }
 
 .row,
@@ -21,27 +21,27 @@ body {
   z-index: -1;
   background-color: #ACACAC;
   border-radius: 50%;
-  width: 5vmin;
-  height: 5vmin;
+  width: 4.5vmax;
+  height: 4.5vmax;
   text-align: center;
   margin: auto;
-  line-height: 5vmin;
+  line-height: 1.75em;
 }
 
 .row {
-  margin-right: 3vmin;
+  margin-right: 2vmax;
 }
 
 .column {
-  margin-bottom: 3vmin;
+  margin-bottom: 2vmax;
 }
 
 .piece {
-  height: 9vmin;
-  width: 9vmin;
+  height: 8.5vmax;
+  width: 8.5vmax;
   background-color: #00B4FF;
   border-radius: 25%;
-  margin: 1vmin;
+  margin: 0.5vmax;
   opacity: 0.05;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
@@ -67,13 +67,14 @@ body {
 
 #game-board {
   clear: both;
-  margin: 6vmin auto;
+  margin: 6vmax auto;
 }
 
 #header {
-  width: 75vmin;
-  height: 4vmin;
-  margin: 2vmin auto;
+  width: 40vmax;
+  height: 4vmax;
+  margin: 2vmax auto;
+  margin-bottom: 10vmax;
 }
 
 #header div {  
@@ -92,12 +93,12 @@ body {
 #par div:last-child {
   background-color: #ececec;
   border-radius: 50%;
-  width: 4vmin;
-  height: 4vmin;
+  width: 4vmax;
+  height: 4vmax;
   padding: 0.25em;
-  line-height: 4vmin;
+  line-height: 1.5em;
   text-align: center;
-  margin-left: 1vmin;
+  margin-left: 1vmax;
 }
 
 #par div:last-child {  
@@ -109,14 +110,14 @@ body {
   visibility: visible;
   opacity: 1;
   position: absolute;
-  font: 8vmin sans-serif;
+  font: 8vmax sans-serif;
   text-align: center;
   top: 50%;
   left: 50%;
-  margin-left: -30vmin;
-  margin-top: -30vmin;
-  width: 60vmin;
-  height: 60vmin;
+  margin-left: -30vmax;
+  margin-top: -30vmax;
+  width: 60vmax;
+  height: 60vmax;
   z-index: 99;
   background-color: white;
   border-radius: 50%;
@@ -130,7 +131,7 @@ body {
 }
 
 #congratulations p {
-  padding-top: 20vmin;
+  padding-top: 20vmax;
 }
 
 .button {
