@@ -4,24 +4,38 @@ table, tr, th, td {
 
 body {
   overflow: hidden;
-  font-family: helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
   background-color: #FFFFFF;
   color: #515151;
+  font: 3vmin bold;
 }
 
 .row,
-.column {      
-  opacity: 0.25;
-  font: 1.5em bold;
-  color: #515151;
+.column {
+  color: white;
   z-index: -1;
+  background-color: #ACACAC;
+  border-radius: 50%;
+  width: 5vmin;
+  height: 5vmin;
+  text-align: center;
+  margin: auto;
+  line-height: 5vmin;
+}
+
+.row {
+  margin-right: 3vmin;
+}
+
+.column {
+  margin-bottom: 3vmin;
 }
 
 .piece {
   height: 9vmin;
   width: 9vmin;
   background-color: #00B4FF;
-  border-radius: 50%;
+  border-radius: 25%;
   margin: 1vmin;
   opacity: 0.05;
   -webkit-transition: all 0.25s ease-in-out;
@@ -31,6 +45,7 @@ body {
 .winner {
   opacity: 1;
   z-index: 10;
+  border-radius: 50%;
   -webkit-transition: transform 1s ease-in-out;
   transition: transform 1s ease-in-out;
   -webkit-transform: scale(40,40);
@@ -42,25 +57,61 @@ body {
 }
 
 .zero {
-  color: #EEEEEE;
+  background-color: #ececec;
 }
 
 #game-board {
   margin: 6vmin auto;
 }
 
-.invisible {
-  display: none;
+#score {
+  width: 60vmin;
+  margin: 2vmin auto;
+}
+
+#score div {
+  display: inline-block;
+  position: relative;
+  left: 72%;
+}
+
+#moves {
+  background-color: #ececec;
+  border-radius: 50%;
+  width: 4vmin;
+  height: 4vmin;
+  padding: 0.25em;
+  line-height: 4vmin;
+  text-align: center;
+  margin-left: 1vmin;
 }
 
 #congratulations {
+  visibility: visible;
+  opacity: 1;
   position: absolute;
-  color: white;
-  font: 4em sans-serif;
+  font: 8vmin sans-serif;
   text-align: center;
-  top: 30%;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  margin-left: -30vmin;
+  margin-top: -30vmin;
+  width: 60vmin;
+  height: 60vmin;
   z-index: 99;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-transition: visibility 0s ease-in-out .5s, opacity .5s ease-in-out;
+  transition: visibility 0s ease-in-out .5s, opacity .5s ease-in-out;
+}
+
+.invisible {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+#congratulations p {
+  padding-top: 20vmin;
 }
 
 .button {

@@ -1,5 +1,6 @@
 function Puzzle(width) {
 	this.width = width;
+	this.moveCount = 0;
 	this.generate();
 }
 
@@ -17,6 +18,10 @@ Puzzle.prototype.generate = function() {
 			return a + b;
 		});
 	}
+
+	console.log(this.solution.reduce(function(a, b) {
+		return a + b;
+	}));
 }
 
 Puzzle.prototype.sumColumn = function(position) {
@@ -47,7 +52,12 @@ Puzzle.prototype.togglePiece = function(position) {
 	if ((this.sumColumn(column) == 0 || this.sumRow(row) == 0) && value == 0) {
 		return false;
 	}
-	this.pieces[position] = value == 0 ? 1 : 0;
+	if (value == 0) {
+		this.pieces[position] = 1;
+		++this.moveCount;
+	} else {
+		this.pieces[position] = 0;
+	}
 	return true;
 }
 

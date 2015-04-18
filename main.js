@@ -1,4 +1,5 @@
 function updateCounts(puzzle) {
+	movesElement.innerHTML = puzzle.moveCount;
 	for (var i = 0; i < puzzle.width; i++) {
 		var colTotal = puzzle.sumColumn(i + 1);
 		columnElements[i].innerHTML = colTotal;
@@ -39,5 +40,6 @@ function setupPieces() {
 var puzzle = new Puzzle(5);
 var columnElements = document.getElementsByClassName("column");
 var rowElements = document.getElementsByClassName("row");
+var movesElement = document.getElementById("moves");
 setupPieces();
 updateCounts(puzzle);
