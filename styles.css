@@ -2,6 +2,11 @@ table, tr, th, td {
   vertical-align: middle;
 }
 
+@font-face {
+    font-family: 'Open Sans';
+    src: url(OpenSans-Regular.ttf);
+}
+
 body {
   overflow: hidden;
   font-family: 'Open Sans', sans-serif !important;
